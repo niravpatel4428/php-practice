@@ -32,6 +32,24 @@
     var_dump($cars3);
 ?>
 
+/* array in ascending alphabetical order start */
+<?php
+    $cars4 = array(10,2,4,12,-4);
+    // $cars4 = array("volvo","BMW","toyota");
+    sort($cars4);
+    // rsort($cars4); descending order
+
+    $clength = count($cars4);
+    for ($x = 0; $x<$clength; $x++)
+    {
+        echo $cars4[$x];
+        echo "<br>";
+    }
+?>
+
+/* array in ascending alphabetical order end */
+
+
 
 </pre>
 </body>

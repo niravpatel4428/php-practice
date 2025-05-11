@@ -363,7 +363,35 @@
     ?>
 
 
+    //Mini-Challenge: String Analyzer Function
 
+    <?php 
+        function analyzeString($input)
+        {
+            $original = $input;
+            $noSpaces = str_replace(" ", "", $input);
+            $reversed = strrev($input);
+            $length = strlen($noSpaces);
+            
+            // Count vowels
+            $vowels = ['a', 'e', 'i', 'o', 'u'];
+            $vowelCount = 0;
+            for ($i = 0; $i < strlen($input); $i++) {
+                if (in_array(strtolower($input[$i]), $vowels)) {
+                    $vowelCount++;
+                }
+            }
+
+            echo "Original: " . $original;
+            echo "<br/>Characters (no spaces): " . $length;
+            echo "<br/>Vowels: " . $vowelCount;
+            echo "<br/>Reversed: " . $reversed;
+        }
+
+        analyzeString("Hello World");
+    ?>
+
+    
 
 </pre>
 </body>
